@@ -44,6 +44,14 @@ CurryApiClient(this).service.getLatestRates()
 
                 })
 ```
+
+**`getLatest(currencyCode: String)`** returns an `Single` which emits the `ForExRates` data. The data contains the latest foreign exchange reference rates. Rates are quoted against the Euro by default. Quote against a different currency by setting the base `currencyCode` in your request. 
+
+**`getHistoricalRates(date: String)`** returns an `Single` which emits the `ForExRates` data. The data contains rates for any day since 1999. Choose a day by setting the `date` in your request. The format is `2000-01-03`
+
+**`getSpecificRates(symbols: String)`** returns an `Single` which emits the `ForExRates` data. The data contains the latest foreign exchange reference rates for the chosen `symbols`. 
+
+
 ## License
 
     Copyright 2017 Roadmap
