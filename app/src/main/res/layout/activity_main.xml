@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/base"
         android:gravity="center"
-        android:text="Hello World!"
+        android:text="Loading..."
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
         android:padding="16dp"
         android:background="@color/colorAccent"/>

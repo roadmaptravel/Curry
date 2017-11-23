@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         recyclerview.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         recyclerview.adapter = rateAdapter
 
-        CurryApiClient(this).service.getLatest()
+        CurryApiClient(this).service.getLatestRates()
                 .subscribeOn(Schedulers.computation())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(object : SingleObserver<ForExRates> {
