@@ -1,3 +1,5 @@
+[![](https://jitpack.io/v/roadmaptravel/Curry.svg)](https://jitpack.io/#roadmaptravel/Curry)
+
 # Curry
 Curry is a currency conversion library for Android. It's build on top of the [Fixer api](http://fixer.io/). 
 Fixer is a free API for current and historical foreign exchange rates published by the European Central Bank.
