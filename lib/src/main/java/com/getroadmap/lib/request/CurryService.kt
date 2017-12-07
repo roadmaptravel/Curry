@@ -27,7 +27,7 @@ interface CurryService {
      * https://api.fixer.io/2000-01-03
      */
     @GET("{date}")
-    fun getHistoricalRates(@Path("date") date: String): Single<ForExRates>
+    fun getHistoricalRates(@Path("date") date: String, @Query("base") currencyCode: String = "EUR"): Single<ForExRates>
 
 
     /**
@@ -35,5 +35,5 @@ interface CurryService {
      * https://api.fixer.io/latest?symbols=USD,GBP
      */
     @GET("latest")
-    fun getSpecificRates(@Query("symbols") symbols: String): Single<ForExRates>
+    fun getSpecificRates(@Query("symbols") symbols: String, @Query("base") currencyCode: String = "EUR"): Single<ForExRates>
 }
