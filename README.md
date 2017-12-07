@@ -19,7 +19,7 @@ allprojects {
 Add the dependency
 ```
 dependencies {
-    compile 'com.github.roadmaptravel:Curry:0.1'
+    compile 'com.github.roadmaptravel:Curry:0.1.2'
 }
 
 ```
@@ -47,11 +47,16 @@ CurryApiClient(this).service.getLatestRates()
                 })
 ```
 
-**`getLatest(currencyCode: String)`** returns an `Single` which emits the `ForExRates` data. The data contains the latest foreign exchange reference rates. Rates are quoted against the Euro by default. Quote against a different currency by setting the base `currencyCode` in your request. 
+**`getLatest(currencyCode: String)`** returns an `Single` which emits the `ForExRates` data. The data contains the latest foreign exchange reference rates.
 
-**`getHistoricalRates(date: String)`** returns an `Single` which emits the `ForExRates` data. The data contains rates for any day since 1999. Choose a day by setting the `date` in your request. The format is `2000-01-03`
+**`getHistoricalRates(date: String)`** returns an `Single` which emits the `ForExRates` data. The data contains rates for any day since 1999. Choose a day by setting the `date` in your request. The format is `2000-01-03`.
 
 **`getSpecificRates(symbols: String)`** returns an `Single` which emits the `ForExRates` data. The data contains the latest foreign exchange reference rates for the chosen `symbols`. 
+
+
+All rates are quoted against the Euro by default. Quote against a different currency by setting the base `currencyCode` as a second parameter. 
+e.g. ```kotlin getHistoricalRates("2000-01-03", "USD") ```
+All currency codes are int the [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) format.
 
 
 ## License
