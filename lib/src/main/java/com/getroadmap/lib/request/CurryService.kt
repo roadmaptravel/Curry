@@ -24,6 +24,7 @@ interface CurryService {
 
     /**
      * Get historical rates for any day since 1999.
+     * Rates are quoted against the Euro by default.
      * https://api.fixer.io/2000-01-03
      */
     @GET("{date}")
@@ -32,6 +33,7 @@ interface CurryService {
 
     /**
      * Request specific exchange rates by setting the symbols parameter.
+     * Rates are quoted against the Euro by default.
      * https://api.fixer.io/latest?symbols=USD,GBP
      */
     @GET("latest")
