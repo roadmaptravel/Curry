@@ -55,7 +55,7 @@ CurryApiClient(this).service.getLatestRates()
 
 
 All rates are quoted against the Euro by default. Quote against a different currency by setting the base `currencyCode` as a second parameter. 
-e.g. ```kotlin getHistoricalRates("2000-01-03", "USD") ```
+e.g. ```getHistoricalRates("2000-01-03", "USD") ```
 All currency codes are int the [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) format.
 
 
