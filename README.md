@@ -19,7 +19,7 @@ allprojects {
 Add the dependency
 ```
 dependencies {
-    compile 'com.github.roadmaptravel:Curry:0.1.2'
+    compile 'com.github.roadmaptravel:Curry:0.1.4'
 }
 
 ```
