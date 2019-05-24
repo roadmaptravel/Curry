@@ -21,7 +21,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class CurryApiClient {
 
-    public static final String API_URL = "https://api.fixer.io/";
+    public static final String API_URL = "https://api.exchangeratesapi.io/";
 
     private CurryService curryService;
     private Context context;

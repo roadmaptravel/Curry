@@ -1,8 +1,8 @@
 [![](https://jitpack.io/v/roadmaptravel/Curry.svg)](https://jitpack.io/#roadmaptravel/Curry)
 
 # Curry
-Curry is a currency conversion library for Android. It's build on top of the [Fixer api](http://fixer.io/). 
-Fixer is a free API for current and historical foreign exchange rates published by the European Central Bank.
+Curry is a currency conversion library for Android. It's build on top of [exchangeratesapi](https://exchangeratesapi.io/).
+Which is a free API for current and historical foreign exchange rates published by the European Central Bank.
 The rates are updated daily around 4PM CET every working day. 
 
 ## Download
@@ -19,7 +19,7 @@ allprojects {
 Add the dependency
 ```
 dependencies {
-    compile 'com.github.roadmaptravel:Curry:0.1.4'
+    compile 'com.github.roadmaptravel:Curry:0.1.5'
 }
 
 ```

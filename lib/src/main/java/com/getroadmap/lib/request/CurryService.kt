@@ -10,14 +10,14 @@ import retrofit2.http.Query
 /**
  * Created by jan on 21/11/17.
  *
- * for documentation: see http://fixer.io/
+ * for documentation: see https://exchangeratesapi.io/
  */
 
 interface CurryService {
     /**
      * Rates are quoted against the Euro by default.
      * Quote against a different currency by setting the base parameter in your request.
-     * https://api.fixer.io/latest?base=EUR
+     * https://api.exchangeratesapi.io/latest?base=EUR
      */
     @GET("latest")
     fun getLatestRates(@Query("base") currencyCode: String = "EUR"): Single<ForExRates>
@@ -25,7 +25,7 @@ interface CurryService {
     /**
      * Get historical rates for any day since 1999.
      * Rates are quoted against the Euro by default.
-     * https://api.fixer.io/2000-01-03
+     * https://api.exchangeratesapi.io/2000-01-03
      */
     @GET("{date}")
     fun getHistoricalRates(@Path("date") date: String, @Query("base") currencyCode: String = "EUR"): Single<ForExRates>
@@ -34,7 +34,7 @@ interface CurryService {
     /**
      * Request specific exchange rates by setting the symbols parameter.
      * Rates are quoted against the Euro by default.
-     * https://api.fixer.io/latest?symbols=USD,GBP
+     * https://api.exchangeratesapi.io/latest?symbols=USD,GBP
      */
     @GET("latest")
     fun getSpecificRates(@Query("symbols") symbols: String, @Query("base") currencyCode: String = "EUR"): Single<ForExRates>

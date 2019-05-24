@@ -18,9 +18,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val rateAdapter = RateAdapter(this, emptyList(), {
+        val rateAdapter = RateAdapter(emptyList()) {
             Log.d("DEBUG", it.toString())
-        })
+        }
 
         recyclerview.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         recyclerview.adapter = rateAdapter
